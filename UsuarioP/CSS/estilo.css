@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: url(../Img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navegacion {
+
+    position: relative;
+    background:rgba(0,0,0,.7);
+    width: 100%;
+    max-width:  700px;
+    margin: 48px auto;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+
+.navegacion ul{
+    list-style: none;
+
+}
+
+/*menus */
+.menu > li{
+    position: relative;
+    /*Aqui ponemos uno alado del otro*/
+    display: inline-block;
+}
+
+/*Damos Estilo a los botones del Menu*/
+
+.menu >li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #ff851b;
+}
+
+
+
+
+
+/*Al pasar el mause*/
+.menu li a:hover{
+    color:#CE7D35;
+    transition: 0.5s;
+
+}
+
+/*Sub Menu*/
+
+.submenu{
+    position: absolute;
+    width: 190%;
+    background:rgba(0,0,0,.7);
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 2px;
+    border-bottom: 4px solid #ff851b;
+}
+
+.submenu li a{
+    display: block;
+    width: 150%;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+/*.Login{
+
+position: fixed;
+bottom: 856px;
+right: 150px;
+width: 80px;
+font-size: medium;
+color: #fff;
+
+
+}*/
+
+.Encabezado {
+
+    background: #2b3a83;
+    margin: auto;
+    height: 40px;
+    color: #2b3a83;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.Encabezado a{
+
+color: #fff; 
+margin:10px 0 80px 0;
+position: fixed;
+top: 0;
+right: 10px;
+font-size: 20px;
+font-weight: 400;
+line-height: 1;
+
+}
+
+.Encabezado h1{
+    color: #fff; 
+    margin:10px 0 80px 0;
+    position: fixed;
+    top: 0;
+    right: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+
+}
