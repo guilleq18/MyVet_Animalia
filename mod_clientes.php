@@ -12,6 +12,7 @@ $clien="SELECT * FROM clientes where id_clientes=:id";
 $ResCliente=$base ->prepare ($clien);
 $ResCliente->execute(array("id"=>$_GET['i1'] ));
 $ResCliente->setFetchMode(PDO::FETCH_ASSOC); 
+$clien=$ResCliente->fetch()
 
 //***************************************ALERTAS*****************************************************
 
