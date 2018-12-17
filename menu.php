@@ -317,7 +317,7 @@ switch ($Permisos) {
               <div class="col-md-4">
                 <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Ver Usuarios</a>
+                  <a class="nav-link active" href="ver_clientes.php">Ver Clientes</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="ver_mascotas.php">Ver Mascotas</a>
