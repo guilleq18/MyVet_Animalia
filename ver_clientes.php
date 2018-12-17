@@ -12,8 +12,7 @@ include "permisos.php";
 switch ($Permisos) {
   case 'admin':
 
-error_reporting(0);
-$f=$_GET['f'];    
+  
 
 $clien="SELECT * FROM clientes";
 $ResCliente=$base ->prepare ($clien);
@@ -21,20 +20,7 @@ $ResCliente->execute();
 $ResCliente->setFetchMode(PDO::FETCH_ASSOC); 
 
 ?>
-<!--*******************************************ALERTAS********************************************* -->
 
-<?php
-if ($f==2) {
-  ?>
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Cliente Modificado con Exito!!!</strong>  
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-    </div>
-  <?php
-}
-?>
 <!--************************************************************************************************* -->
 </head>
 <body>
@@ -63,7 +49,7 @@ if ($f==2) {
                       <td width="10">teléfono</td>
                       <td width="10">Dirección</td>
                       <td width="50">E-Mail</td>
-                      <td width="10">Modificar Datos</td>
+                   
                       
         
                     </tr>
@@ -86,11 +72,7 @@ if ($f==2) {
                             
 
    
-          <td style="text-align: center;">
-            <span style="font-size: 12px" class="btn btn-primary btn-lg"   onclick = "location='mod_clientes.php?i1=<?php echo $clien["id_clientes"]?>'">Modificar
-              <span class="fa fa-plus-circle"></span>
-            </span>
-          </td>
+          
           
           
           

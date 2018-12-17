@@ -329,30 +329,9 @@ switch ($Permisos) {
           </div>
         </div>
       </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          H. Clinicas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <span class="text-uppercase text-white">Gestión H. Clinicas</span>
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Agregar H. Clinica</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Buscar H. Clinicas</a>
-                </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
+      <li class="nav-item">
+              <a class="nav-link active" href="historia_clinica.php">Historias Clinicas</a>
+        </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Vacunación
