@@ -15,10 +15,10 @@ switch ($Permisos) {
 error_reporting(0);
 $f=$_GET['f'];    
 
-$masco="SELECT * FROM mascotas";
-$ResMascotas=$base ->prepare ($masco);
-$ResMascotas->execute();
-$ResMascotas->setFetchMode(PDO::FETCH_ASSOC); 
+$clien="SELECT * FROM clientes";
+$ResCliente=$base ->prepare ($clien);
+$ResCliente->execute();
+$ResCliente->setFetchMode(PDO::FETCH_ASSOC); 
 
 ?>
 <!--*******************************************ALERTAS********************************************* -->
@@ -67,14 +67,13 @@ if ($f==2) {
                     <tr>
                       
                       <td width="80">Nombre</td>
-                      <td width="11">Sexo</td>
-                      <td width="30">Tipo</td>
-                      <td width="80">Raza</td>
-                      <td width="10">Color</td>
-                      <td width="10">Tamaño</td>
-                      <td width="10">Edad</td>
-                      <td width="100">Nombre del Cliente</td>
-                      <td width="100">Apellido del Cliente</td>
+                      <td width="11">DNI</td>
+                      <td width="30">Nombre</td>
+                      <td width="80">Apellido</td>
+                      <td width="10">Fecha de Nacimiento</td>
+                      <td width="10">teléfono</td>
+                      <td width="10">Dirección</td>
+                      <td width="100">E-Mail</td>
                       <td width="10">Modificar</td>
         
         
@@ -83,48 +82,25 @@ if ($f==2) {
                   
               <tbody >
                     <?php 
-                    //****************IMPRIMO MASCOTAS************************
-                    while ($Masc=$ResMascotas->fetch()) {
+                    //****************IMPRIMO CLIENTES************************
+                    while ($clien=$ResCliente->fetch()) {
                       ?>
                       <tr >
-                        <td><?php echo $Masc['nombre'] ?></td>
-                        <td><?php echo $Masc['sexo'] ?></td>
-                        <td><?php echo $Masc['tipo_demascota'] ?></td>
-                        <td><?php echo $Masc['raza'] ?></td>
-                        <td><?php echo $Masc['color'] ?></td>
-                        <td><?php if ($Masc['id_tamano'] ==1) {
-                                  echo "Micro"; 
-                                 }elseif ($Masc['id_tamano'] ==2) {
-                                   echo "Pequeño";
-                                 }elseif ($Masc['id_tamano'] ==3) {
-                                   echo "Mediano";
-                                 }elseif ($Masc['id_tamano'] ==4) {
-                                   echo "Grande";
-                                 }?></td>
-                        <?php
-                        //calculo la edad con respecto al año actual y de nacimiento
-                        $hoy = date("Y");
-                        $anio = date("Y", strtotime($Masc['nacimiento']));
-                        $annos =$hoy-$anio;
-                        ?> 
-                        <td><?php  echo $annos ?></td>
-                        <!--IMPRIMO EL NOMBRE Y APELLIDO DEL DUEÑO D LA MASCOTA -->
-                        <?php
-                              $usuarios="SELECT * FROM clientes WHERE id_clientes=:id";
-                              $ResUsuarios=$base ->prepare ($usuarios);
-                              $ResUsuarios->execute(array(':id' =>$Masc['id_cliente']  ));
-                              $ResUsuarios->setFetchMode(PDO::FETCH_ASSOC);
-                              while ($User=$ResUsuarios->fetch() ) {
-                              ?>
-                              <td><?php echo $User['nombre'] ?></td>
-                              <td><?php echo $User['apellido'] ?></td>  
-                         
+                        <td><?php echo $clien['dni'] ?></td>
+                        <td><?php echo $clien['nombre'] ?></td>
+                        <td><?php echo $clien['apellido'] ?></td>
+                        <td><?php echo $clien['fechadenacimiento'] ?></td>
+                        <td><?php echo $clien['telefono'] ?></td>
+                        <td><?php echo $clien['direccion'] ?></td>
+                        <td><?php echo $clien['email'] ?></td>
+                        
+                       
                                                      
                    
                     
               <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='mod_mascota.php?i1=<?php echo $Masc["id_mascotas"]?>'">Modificar
+                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='mod_clientes.php?i1=<?php echo $clien["id_clientes"]?>'">Modificar
                   <span class="glyphicon glyphicon-edit"></span>
                 </span>
                 </span>
@@ -135,7 +111,7 @@ if ($f==2) {
           
         </tr>
         <?php 
-          }
+        
         }
       ?>
     </tbody>
