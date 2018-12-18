@@ -6,6 +6,12 @@ include 'permisos.php';
 
 switch ($Permisos){
  case "admin":
+$historia="SELECT * FROM historiasclinicas where id_historiasclinicas=:id";
+$Reshistoria=$base ->prepare ($historia);
+$Reshistoria->execute(array("id"=>$_GET['i1']));
+$Reshistoria->setFetchMode(PDO::FETCH_ASSOC);
+$Hclinicas=$Reshistoria->fetch()
+
 
 ?>
 <!--*************************************FORMULARIO************************************************ -->
@@ -24,48 +30,49 @@ switch ($Permisos){
 	<h4 class="card-title mt-2">Registrar Historia Clinica</h4>
 </header>
 <article class="card-body">
-<form action="altahistoria_clinica1.php" method="POST">
+<form action="mod_historia_clinica1.php" method="POST">
 
-			<input type="hidden" value="<?php echo $_GET['i1'] ?>" name="idmascota">
+			<input type="hidden" value="<?php echo $Hclinicas['id_mascotas'] ?>" name="idmascota" required>
+			<input type="hidden" value="<?php echo $Hclinicas['id_historiasclinicas'] ?>" name="idhistoria" required>
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Motivo </label>   
-		  	<input type="text" class="form-control" placeholder="" name="motivo" id="motivo" required>
+		  	<input type="text" class="form-control" value="<?php echo $Hclinicas['motivode_consulta'] ?>" name="motivo" id="motivo" required>
 		</div> 
 		<div class="col form-group">
 			<label>Seña Particular</label>
-		  	<input type="text" class="form-control" placeholder=" " name="sena" id="sena" required>
+		  	<input type="text" class="form-control" value="<?php echo $Hclinicas['sena_particulares'] ?>" name="sena" id="sena" required>
 		</div> 
 	</div> 
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Temperatura </label>   
-		  	<input type="text" class="form-control" placeholder="" name="temperatura" id="temperatura"required>
+		  	<input type="text" class="form-control" value="<?php echo $Hclinicas['temperatura'] ?>" name="temperatura" id="temperatura" required>
 		</div> 
 		<div class="col form-group">
 			<label>Peso</label>
-		  	<input type="text" class="form-control" placeholder=" " name="peso" id="peso" required>
+		  	<input type="text" class="form-control" value="<?php echo $Hclinicas['peso'] ?>" name="peso" id="peso" required>
 		</div> 
 	</div> 
 	<div class="form-group">
 		<label>Diagnóstico</label>
-		<textarea class="form-control" rows="5" name="diagnostico" required></textarea> 
+		<textarea class="form-control" rows="5"  name="diagnostico" required><?php echo $Hclinicas['diagnostico'] ?></textarea> 
 		
 	</div> 
 	
 	<div class="form-row">
 		<div class="form-group col-md-6">
 		  <label>Fecha de Consulta</label>
-		  <input type="date" class="form-control" name="fecha" id="fecha" required>
+		  <input type="date" class="form-control" value="<?php echo $Hclinicas['fechade_observacion'] ?>" name="fecha" id="fecha" required>
 		</div> 
 		<div class="form-group col-md-6">
 		  <label>Tratamiento</label>
-		  <textarea class="form-control" rows="3" name="tratamiento" required></textarea> 
+		  <textarea class="form-control" rows="3"  name="tratamiento" required><?php echo $Hclinicas['tratamiento'] ?></textarea> 
 		</div> 
 	</div> 
 	
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Registrar </button>
+        <button type="submit" class="btn btn-primary btn-block"> Guardar Cambios </button>
     </div>      
                                              
 </form>
@@ -87,8 +94,6 @@ switch ($Permisos){
 </div>
 <br><br>
 </article>
-
-        
 <?php
         	break;
 }

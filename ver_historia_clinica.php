@@ -12,6 +12,10 @@ include "permisos.php";
 switch ($Permisos) {
   case 'admin':
 
+
+error_reporting(0);
+$f=$_GET['f']; 
+
 $mascota="SELECT nombre FROM mascotas where id_mascotas=:id";
 $ResMascota=$base ->prepare ($mascota);
 $ResMascota->execute(array("id"=>$_GET['i1'] ));
@@ -23,8 +27,36 @@ $Reshistoria=$base ->prepare ($historia);
 $Reshistoria->execute(array("id"=>$_GET['i1'] ));
 $Reshistoria->setFetchMode(PDO::FETCH_ASSOC); 
 
-?>
 
+?>
+<!--*************************************ALERTAS********************************************* -->
+
+
+<!--*************************************HISTORIA MODIFICADA************************************* -->
+
+<?php
+if ($f==1) {
+  ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Historia Clinica Modificada con Exito!!!</strong>  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+  <?php
+//*************************************HISTORIA ELIMINADA**************************************** -->
+
+}elseif ($f==2) {
+?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Historia Clinica Eliminada con Exito!!!</strong>  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+  <?php
+}
+?>
 <!--************************************************************************************************* -->
 </head>
 <body>
@@ -85,7 +117,7 @@ $Reshistoria->setFetchMode(PDO::FETCH_ASSOC);
               </td>
                      <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='mod_historia_clinica.php?i1=<?php echo $Hclinicas["id_historiasclinicas"]?>'">Eliminar
+                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='baja_historia_clinica.php?i1=<?php echo $Hclinicas["id_historiasclinicas"]?>'">Eliminar
                      <span class="glyphicon glyphicon-edit"></span>
                   </span>
                 </span>
