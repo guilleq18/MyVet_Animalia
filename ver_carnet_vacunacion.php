@@ -112,7 +112,7 @@ if ($f==1) {
                       <td width="80">Enfermedad</td>
                       <td width="80">Farmaco Aplicado</td>
                       <td width="10">Modificar</td>
-                      <td width="10">Eliminar</td>
+                      
                       
                    
                       
@@ -137,11 +137,7 @@ if ($f==1) {
                   <a href="mod_carnet_vacunacion.php?i1=<?php echo $HVacuna["id_calendariosvacunacion"];?>" class=" btn btn-primary mt-1">Modificar</a>
                  
               </td>
-                     <td style="text-align: center;">
-                
-                 <a href="baja_carnet_vacunacion.php?i1=<?php echo $HVacuna["id_calendariosvacunacion"];?>&idwm=<?php echo $HVacuna["id_mascotas"];?>" class=" btn btn-primary mt-1">Eliminar</a> 
-                 
-              </td>       
+                          
 
    
           
