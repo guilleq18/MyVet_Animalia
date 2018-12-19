@@ -66,7 +66,7 @@ if ($f==2) {
                       <td style="background-color: #2874a6;" width="100">Nombre del Cliente</td>
                       <td style="background-color: #2874a6;" width="100" >Apellido del Cliente</td>
                       <td style="background-color: #2874a6;" width="10">Modificar</td>
-                      <td style="background-color: #2874a6;" width="10">Eliminar</td>
+                      
         
                     </tr>
               </thead>
@@ -118,11 +118,7 @@ if ($f==2) {
                  
               </td>
               
-              <td style="text-align: center;">
-                
-                <a href="eliminar_mascota.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Eliminar</a>
-                 
-              </td>
+              
               
            
           
