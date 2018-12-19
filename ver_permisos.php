@@ -95,7 +95,7 @@ if ($f==1) {
 
 							<td style="text-align: center;">
                 
-                				<a href="mod_mascota.phpeditar_permisos.php?i1=<?php echo $User["id_clientes"];?>&i2=<?php echo $perm["id_permisos"];?>" class=" btn btn-primary mt-1">Modificar</a>
+                				<a href="mod_permisos.php?i1=<?php echo $User["id_clientes"];?>&i2=<?php echo $perm["id_permisos"];?>" class=" btn btn-primary mt-1">Modificar</a>
                  
              				</td>
 							

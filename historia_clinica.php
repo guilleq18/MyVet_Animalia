@@ -33,6 +33,15 @@ if ($f==2) {
             </button>
     </div>
   <?php
+}else if ($f==3) {
+  ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Notificación Generada con Exito!!!</strong>  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+  <?php
 }
 ?>
 <!--************************************************************************************************* -->
@@ -111,13 +120,13 @@ if ($f==2) {
               
               <td style="text-align: center;">
               
-                  <a href="ver_carnet_vacunacion.phpi1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Abrir</a>  
+                  <a href="ver_carnet_vacunacion.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Abrir</a>  
                 
                </td>
 
               <td style="text-align: center;">
               
-                  <a href="alta_notific_vacunacion.phpi1=<?php echo $User["id_clientes"]?>&idm=<?php echo $Masc['id_mascotas'] ?>" class=" btn btn-primary mt-1">Generar</a>  
+                  <a href="alta_notific_vacunacion.php?i1=<?php echo $User["id_clientes"]?>&idm=<?php echo $Masc['id_mascotas'] ?>" class=" btn btn-primary mt-1">Generar</a>  
                 
               </td>
           

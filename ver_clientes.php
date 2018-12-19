@@ -14,8 +14,8 @@ switch ($Permisos) {
 
   
 
-$clien="SELECT * FROM clientes";
-$ResCliente=$base ->prepare ($clien);
+$client="SELECT * FROM clientes";
+$ResCliente=$base ->prepare ($client);
 $ResCliente->execute();
 $ResCliente->setFetchMode(PDO::FETCH_ASSOC); 
 
@@ -51,8 +51,7 @@ $ResCliente->setFetchMode(PDO::FETCH_ASSOC);
                       <td width="10">teléfono</td>
                       <td width="10">Dirección</td>
                       <td width="50">E-Mail</td>
-                      <td width="50">Modificar</td>
-                      <td width="50">Eliminar</td>
+                      
         
                     </tr>
               </thead>
@@ -71,17 +70,7 @@ $ResCliente->setFetchMode(PDO::FETCH_ASSOC);
                         <td><?php echo $clien['direccion'] ?></td>
                         <td><?php echo $clien['email'] ?></td>
                      
-                     <td style="text-align: center;">
-                
-                        <a href="mod_clientes.php?i1=<?php echo $clien["id_cliente"]?>" class=" btn btn-primary mt-1">Modificar</a>
-                 
-                     </td>
-                    
-                     <td style="text-align: center;">
-                
-                        <a href="baja_clientes.php?i1=<?php echo $clien["id_cliente"]?>" class=" btn btn-primary mt-1">Eliminar</a>
-                 
-                     </td>
+                     
 
    
           

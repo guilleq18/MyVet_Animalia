@@ -11,6 +11,8 @@ switch ($Permisos){
 
 error_reporting(0);
 $f=$_GET['f'];
+
+
 //************************************DNI EXISTENTE*****************************************
 if ($f==1) {
 ?>
@@ -43,7 +45,9 @@ $cliente=$ResCliente->fetch()
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	<h4 class="card-title mt-2">Registro</h4>
+	<a href="ver_clientes.php" class="float-right btn btn-outline-primary mt-1">Volver</a>
+	<h4 class="card-title text-center mt-2">Modificar Cliente</h4>
+	
 </header>
 <article class="card-body">
 <form action="mod_mascota1.php" method="POST">

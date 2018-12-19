@@ -22,11 +22,11 @@ $per=$_GET['i2'];
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	
-	<h4 class="card-title mt-2">Modificar Permisos</h4>
+	 <a href="ver_permisos.php" class="float-right btn btn-secondary mt-1">Volver</a>
+	<h4 class="card-title text-center mt-2">Modificar Permisos</h4>
 </header>
 <article class="card-body">
-<form action="editar_permisos2.php" method="POST">
+<form action="mod_permisos1.php" method="POST">
 	           
 	<div class=" form-group">
 			<label>Permisos </label>   

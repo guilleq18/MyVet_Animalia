@@ -25,7 +25,8 @@ $Masc=$ResMascotas->fetch()
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	<h4 class="card-title mt-2">Registro</h4>
+	<a href="ver_mascotas.php" class="float-right btn btn-secondary mt-1">Volver</a>
+	<h4 class="card-title text-center mt-2">Registrar Mascotas</h4>
 </header>
 <article class="card-body">
 <form action="mod_mascota1.php" method="POST">

@@ -301,10 +301,10 @@ switch ($Permisos) {
          <div class="container">
             <div class="row">
               <div class="col-md-4">
-                <span class="text-uppercase text-white">Gestión Usuarios</span>
+                <span class="text-uppercase text-white">Gestión de Usuarios y Clientes</span>
                 <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="alta_clientes_admin.php">Agregar Usuario</a>
+                  <a class="nav-link active" href="ver_clientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="ver_permisos.php">Asignar Permisos</a>
@@ -312,19 +312,11 @@ switch ($Permisos) {
                 <li class="nav-item">
                   <a class="nav-link active" href="alta_mascotas.php">Agregar Mascotas</a>
                 </li>
-              </ul>
-              </div>
-              <div class="col-md-4">
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="ver_clientes.php">Ver Clientes</a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="ver_mascotas.php">Ver Mascotas</a>
                 </li>
-              
               </ul>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -332,31 +324,10 @@ switch ($Permisos) {
       <li class="nav-item">
               <a class="nav-link active" href="historia_clinica.php">Historias Clinicas</a>
         </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Vacunación
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-               <span class="text-uppercase text-white">Gestión Vacunación</span>
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Agregar Vacuna</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Buscar H. Vacunación</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Generar recordatorio</a>
-                </li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
+        <li class="nav-item">
+              <a class="nav-link active" href="ver_notific_vacunacion.php">Ver Notificaciones</a>
+        </li>
+      
         <li class="nav-item">
               <a class="nav-link active" href="cerrar_sesion.php">Cerrar Sesion</a>
         </li> 
