@@ -91,13 +91,23 @@ $ResCliente->setFetchMode(PDO::FETCH_ASSOC);
 <script type="text/javascript">
   $(document).ready(function() {
     $('#iddatatable').DataTable();
-  } );
-</script>
-<script type="text/javascript">
-  $(document).ready(function(){
+          
+     } );
+$(document).ready(function(){
     $('#tablaDatatable').load('tabla.php');
   });
+
+
 </script>
+
+  
+
+
+  
+
+
+
+
 
 
 
