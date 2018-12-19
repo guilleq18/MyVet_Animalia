@@ -88,7 +88,7 @@ if ($f==1) {
                       <td width="200">Diagnostico</td>
                       <td width="100">Tratamiento</td>
                       <td width="10">Modificar</td>
-                      <td width="10">Eliminar</td>
+                      
                       
                    
                       
@@ -114,11 +114,7 @@ if ($f==1) {
                   <a href="mod_historia_clinica.php?i1=<?php echo $Hclinicas['id_historiasclinicas']?>" class="float-right btn btn-primary mt-1">Modificar</a>
                  
                           </td>
-                     <td style="text-align: center;">
-
-                  <a href="baja_historia_clinica.php?i1=<?php echo $Hclinicas['id_historiasclinicas']?>&idm=$Hclinicas['id_mascotas'] " class="float-right btn btn-primary mt-1">Eliminar</a>
-                
-                          </td>       
+                       
 
         </tr>
         <?php 
