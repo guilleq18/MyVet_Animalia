@@ -7,6 +7,7 @@ include 'permisos.php';
 switch ($Permisos){
  case "admin":
 
+
 ?>
 <!--*************************************FORMULARIO************************************************ -->
 
@@ -21,50 +22,38 @@ switch ($Permisos){
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	<h4 class="card-title mt-2">Registrar Historia Clinica</h4>
+	<a href="ver_carnet_vacunacion.php?i1=<?php echo $_GET['i1'] ?>" class="float-right btn btn-outline-primary mt-1">Volver</a>
+	<h4 class="card-title mt-2">Registrar Vacunación</h4>
 </header>
 <article class="card-body">
-<form action="altahistoria_clinica1.php" method="POST">
+<form action="alta_carnet_vacunacion1.php" method="POST">
 
 			<input type="hidden" value="<?php echo $_GET['i1'] ?>" name="idmascota">
 	<div class="form-row">
 		<div class="col form-group">
-			<label>Motivo </label>   
-		  	<input type="text" class="form-control" placeholder="" name="motivo" id="motivo" required>
+			<label>Enfermedad </label>   
+		  	<input type="text" class="form-control" placeholder="" name="enfermedad" id="enfermedad" required>
 		</div> 
-		<div class="col form-group">
-			<label>Seña Particular</label>
-		  	<input type="text" class="form-control" placeholder=" " name="sena" id="sena" required>
-		</div> 
+		 
 	</div> 
 	<div class="form-row">
 		<div class="col form-group">
-			<label>Temperatura </label>   
-		  	<input type="text" class="form-control" placeholder="" name="temperatura" id="temperatura"required>
+			<label>Farmaco Aplicado </label>   
+		  	<input type="text" class="form-control" placeholder="" name="vacuna" id="vacuna"required>
 		</div> 
-		<div class="col form-group">
-			<label>Peso</label>
-		  	<input type="text" class="form-control" placeholder=" " name="peso" id="peso" required>
-		</div> 
+		 
 	</div> 
-	<div class="form-group">
-		<label>Diagnóstico</label>
-		<textarea class="form-control" rows="5" name="diagnostico" required></textarea> 
+	
+	
+	<div class="form-row">
+		<div class="form-group col-md-6">
+		  <label>Fecha de Aplicación</label>
+		  <input type="date" class="form-control" name="fecha" id="fecha" required>
+		</div> 
 		
 	</div> 
 	
-	<div class="form-row">
-		<div class="form-group col-md-6">
-		  <label>Fecha de Consulta</label>
-		  <input type="date" class="form-control" name="fecha" id="fecha" required>
-		</div> 
-		<div class="form-group col-md-6">
-		  <label>Tratamiento</label>
-		  <textarea class="form-control" rows="3" name="tratamiento" required></textarea> 
-		</div> 
-	</div> 
-	
-    <div class="form-group">
+    <div class="form-group"><br>
         <button type="submit" class="btn btn-primary btn-block"> Registrar </button>
     </div>      
                                              

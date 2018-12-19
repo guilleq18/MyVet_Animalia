@@ -39,12 +39,13 @@ if ($f==2) {
 </head>
 <body>
   <br>
-  <div class="container">
+  <div class="container" style="max-width: 1800px; width: 1400px;>
     <div class="row">
       <div class="col-sm-12">
         <div class="card text-left">
           <div class="card-header">
-           Mascotas
+
+          <h4 class="card-title text-center mt-2">Listado de Mascotas</h4>
           </div>
           <div class="card-body">
             
@@ -62,10 +63,10 @@ if ($f==2) {
                       <td width="10">Color</td>
                       <td width="10">Tamaño</td>
                       <td width="10">Edad</td>
-                      <td width="100">Nombre del Cliente</td>
-                      <td width="100">Apellido del Cliente</td>
-                      <td width="10">Modificar</td>
-        
+                      <td style="background-color: #2874a6;" width="100">Nombre del Cliente</td>
+                      <td style="background-color: #2874a6;" width="100" >Apellido del Cliente</td>
+                      <td style="background-color: #2874a6;" width="10">Modificar</td>
+                      <td style="background-color: #2874a6;" width="10">Eliminar</td>
         
                     </tr>
               </thead>
@@ -113,11 +114,14 @@ if ($f==2) {
                     
               <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='mod_mascota.php?i1=<?php echo $Masc["id_mascotas"]?>'">Modificar
-                  <span class="glyphicon glyphicon-edit"></span>
-                </span>
-                </span>
-          </td>
+                <a href="mod_mascota.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Modificar</a>
+                 
+              </td>
+              
+              <td style="text-align: center;">
+                
+                <a href="eliminar_mascota.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Eliminar</a>
+                 
               </td>
               
            

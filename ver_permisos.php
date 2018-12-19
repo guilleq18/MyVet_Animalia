@@ -35,27 +35,31 @@ if ($f==1) {
 <!--************************************************************************************************* -->
 </head>
 <body>
-	<br>
+
+	<div class="container">
+		<br>  <p class="text-center">My Vet Animalia </p>
+		<hr>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="card text-left">
 					<div class="card-header">
-						Tablas dinamicas con datatble y php
+					   <h4 class="card-title text-center text-center mt-2">Permisos de Usuarios y Clientes</h4>
 					</div>
 					<div class="card-body">
 						
 						<hr>
-<!--////////////////////////////////////COMIENZO DATATABLE//////////////////////////////////////////////-->						
+<!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////-->						
 						<div>
 							<table class="table table-hover table-condensed table-bordered" id="iddatatable">
 							<thead style="background-color: #dc3545;color: white; font-weight: bold;">
 										<tr>
-											<td width="10">id</td>
+											
 											<td width="50">DNI</td>
 											<td width="100">Nombre</td>
+											<td width="100">Apellido</td>
 											<td width="100">Permiso</td>
-											<td width="10">Modificar</td>
+											<td width="10">Modificar Permisos</td>
 											
 
 				
@@ -69,9 +73,10 @@ if ($f==1) {
 										while ($User=$ResUsuarios->fetch()) {
 											?>
 											<tr >
-												<td><?php echo $User['id_clientes'] ?></td>
+												
 												<td><?php echo $User['dni'] ?></td>
 												<td><?php echo $User['nombre'] ?></td>
+												<td><?php echo $User['apellido'] ?></td>
 										<?php
 
 										//***************BUSCO EL PERMISO DEL USUARIO*************
@@ -86,11 +91,14 @@ if ($f==1) {
 											 <td><?php echo $perm['aplicaciones_cod'] ?></td>
 
 										
+
+
 							<td style="text-align: center;">
-								<span class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='editar_permisos.php?i1=<?php echo $User["id_clientes"];?>&i2=<?php echo $perm["id_permisos"];?>'">
-									<span class="glyphicon glyphicon-edit"></span>
-								</span>
-							</td>
+                
+                				<a href="mod_mascota.phpeditar_permisos.php?i1=<?php echo $User["id_clientes"];?>&i2=<?php echo $perm["id_permisos"];?>" class=" btn btn-primary mt-1">Modificar</a>
+                 
+             				</td>
+							
 							
 					
 					

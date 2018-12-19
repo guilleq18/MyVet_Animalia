@@ -39,12 +39,12 @@ if ($f==2) {
 </head>
 <body>
   <br>
-  <div class="container">
+  <div class="container" style="max-width: 1800px; width: 1400px;>
     <div class="row">
       <div class="col-sm-12">
         <div class="card text-left">
           <div class="card-header">
-           Gestión de Historias Clinicas
+          <h4 class="card-title text-center mt-2"> Gestión de Historias Clinicas</h4>
           </div>
           <div class="card-body">
             
@@ -58,11 +58,13 @@ if ($f==2) {
                       <td width="80">Nombre</td>
                       <td width="10">Tipo</td>
                       <td width="30">Raza</td>
-                      <td width="10">Color</td>
+                      
                       <td width="100">Nombre del Cliente</td>
                       <td width="100">Apellido del Cliente</td>
-                      <td width="100">Agregar H. Clinica</td>
-                      <td width="100">Ver H. Clinicas</td>
+                      <td width="50">Agregar H. Clinica</td>
+                      <td width="80">Historial Clinico</td>
+                      <td width="50">Historial de Vacunación</td>
+                      <td width="50">Notificacion de Vacunación</td>
                     
         
                     </tr>
@@ -77,7 +79,7 @@ if ($f==2) {
                         <td><?php echo $Masc['nombre'] ?></td>
                         <td><?php echo $Masc['tipo_demascota'] ?></td>
                         <td><?php echo $Masc['raza'] ?></td>
-                        <td><?php echo $Masc['color'] ?></td>
+                        
                         
                         
                         <!--IMPRIMO EL NOMBRE Y APELLIDO DEL DUEÑO D LA MASCOTA -->
@@ -96,21 +98,28 @@ if ($f==2) {
                     
               <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='altahistoria_clinica.php?i1=<?php echo $Masc["id_mascotas"]?>'">Agregar
-                  <span class="glyphicon glyphicon-edit"></span>
-                </span>
-                </span>
+
+                   <a href="alta_historia_clinica.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Agregar</a>
+                 
                  </td>
-                 <td style="text-align: center;">
+              <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary a-btn-slide-text btn-lg  " data-toggle="modal" onclick = "location='ver_historia_clinica.php?i1=<?php echo $Masc["id_mascotas"]?>'">Ver
-                  <span class="glyphicon glyphicon-edit"></span>
-                </span>
-                </span>
-                 </td>
-             </td>
+                  <a href="ver_historia_clinica.php?i1=i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Ver Historial</a>
+                
+                  
+               </td>
               
-           
+              <td style="text-align: center;">
+              
+                  <a href="ver_carnet_vacunacion.phpi1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Abrir</a>  
+                
+               </td>
+
+              <td style="text-align: center;">
+              
+                  <a href="alta_notific_vacunacion.phpi1=<?php echo $User["id_clientes"]?>&idm=<?php echo $Masc['id_mascotas'] ?>" class=" btn btn-primary mt-1">Generar</a>  
+                
+              </td>
           
         </tr>
         <?php 

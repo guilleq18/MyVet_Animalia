@@ -42,10 +42,11 @@ if ($f==1) {
       <div class="col-sm-12">
         <div class="card text-left">
           <div class="card-header">
-            Agregar Mascotas
+            <a href="ver_mascotas.php" class="float-right btn btn-primary mt-1">Ver Mascotas</a>
+            <h4 class="card-title text-center mt-2">Agregar Mascotas</h4>
           </div>
           <div class="card-body">
-            
+            <h6 class="card-title text-center mt-2">Seleccionar Cliente Para Asignarle una Mascota</h6>
             <hr>
 <!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////////////-->        
             <div>
@@ -57,7 +58,7 @@ if ($f==1) {
                       <td width="100">Nombre</td>
                       <td width="100">Apellido</td>
                       <td width="10">E-mail</td>
-                      <td width="10">Mascota</td>
+                      <td width="100">Agregar Mascota</td>
                       
 
         
@@ -77,16 +78,14 @@ if ($f==1) {
                         <td><?php echo $User['email'] ?></td>
                    
                     
-              <td style="text-align: center;">
+           
+                  
+                    <td style="text-align: center;">
                 
-                 <span style="font-size: 12px" class="btn btn-primary  btn-lg " data-toggle="modal" data-target="#modalMascota"  onclick="Idcliente(<?php echo $User['id_clientes']?>)">Agregar
-                    <span class="fa fa-pencil-square-o"></span>
-                </span>
-          </td>
-              </td>
-              
-          
-          
+                        <a href="alta_mascotas1.php?i1=<?php echo  $User['id_clientes']?>" class=" btn btn-primary mt-1">Agregar</a>
+                 
+                     </td>
+
         </tr>
         <?php 
       }
@@ -95,67 +94,6 @@ if ($f==1) {
     </tbody>
   </table>
 </div>
-
-<!-- ///////////////////////////////MODAL AGREGAR TURNO/////////////////////////////////////////// -->
-  <div class="modal fade" id="modalMascota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Agregar Mascota</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="frmnuevo" method="POST" action="alta_mascotas1.php">
-            <input type="hidden" class="form-control input-sm" id="idCliente" name="idCliente" required>
-            <label>Nombre</label>
-            <input type="text" class="form-control input-sm" id="nombre" name="nombre" required>
-            <label>Sexo</label>
-              <select class="custom-select" name="sexo" id="sexo" required>
-                  <option selected>Seleccionar Sexo</option>
-                  <option  value="macho">Macho</option>
-                  <option  value="hembra">Hembra</option>
-            </select>
-            <label>Tipo</label>
-            <input type="text" class="form-control input-sm" id="tipo" name="tipo" required>1
-            <label>Raza</label>
-            <input type="text" class="form-control input-sm" id="raza" name="raza" required>
-            <label>Color</label>
-            <input type="text" class="form-control input-sm" id="color" name="color" required>
-            <label>Fecha de Nacimiento</label>
-            <input type="date" class="form-control input-sm" id="Nacimiento" name="Nacimiento" required>
-            <label>Tamaño</label>
-              <select class="custom-select" name="tamano" id="tamano" required>
-                  <option selected>Seleccione el tamaño</option>
-                  <option  value="1">Micro</option>
-                  <option  value="2">Pequeño</option>
-                  <option  value="3">Mediano</option>
-                  <option  value="4">Grande</option>
-            </select>
-    
-        <div class="modal-footer">
-          <input type="submit" value="guardar" class="btn btn-primary">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          
-        </div>
-
-          </form>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-<!--***********************************FUNCION PARA LLEVAR ID CLIENTE*************************** -->
-<script>
-  function Idcliente(id){
-    //console.log(id);
-        idClienteHidden = $('#idCliente');
-    
-        idClienteHidden.val(id);
-    
-  }
-</script>
 
 <!--***************************************FUNCIÓN PARA BUSCAR************************************** -->
 <script type="text/javascript">
