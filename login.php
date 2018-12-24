@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion.php';
 $pass=$_POST['password'];
 
@@ -18,12 +19,13 @@ if ($numeroRegistro!=0) {
 //***********************SI EXISTE REVISA QUE COINCIDAN LAS CONTRASEÑAS*******************	
 
 while($cliente =$resultado->fetch(PDO::FETCH_ASSOC)){
-        echo $cliente['password'];
+       
         if (password_verify($pass, $cliente['password'])) {
 
 //**********************SI COINCIDEN NOS LLEVA A LA PAG PCIPAL****************************
-            session_start();
+            
             $_SESSION["idcliente"]=$cliente['id_clientes'];
+            echo $_SESSION["idcliente"] ;
             header("location: index1.php");
 
 //**********************SI NO COINCIDEN DEVUELVE UN ERROR AL INICIO***********************
