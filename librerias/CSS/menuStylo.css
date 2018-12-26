@@ -2,10 +2,10 @@
 .navbar .dropdown-menu div[class*="col"] {
    margin-bottom:1rem;
 }
+
 .navbar .dropdown-menu {
   border:none;
-  background-color:rgba(0,0,0,.7)!important;
-  
+  background-color: #343a40  !important;
 }
 
 /* breakpoint and up - mega dropdown styles */
@@ -15,8 +15,6 @@
 .navbar {
   padding-top:0px;
   padding-bottom:0px;
- background-color:rgba(0,0,0,.7)!important;
-
 }
 
 /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
@@ -32,7 +30,6 @@
   width:100%;
   left:0;
   right:0;
-  text-align: right;
 /*  height of nav-item  */
   top:45px;
   

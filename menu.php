@@ -14,7 +14,7 @@ switch ($Permisos) {
 ////////////////////////////////CASE CLIENTES//////////////////////////////////////////////////////////  
     case "cliente":
     ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" src="librerias/Img/4.png" href="#">Mega Dropdown</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" ></span>
@@ -200,7 +200,7 @@ switch ($Permisos) {
     case "semiAdmin":
 ?>
  
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <a class="navbar-brand" href="index1.php" src="librerias/Img/4.png">MyVet Animalia</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
     <span class="navbar-toggler-icon" src="librerias/Img/logo.jfif" alt="logo"></span>
@@ -285,7 +285,7 @@ switch ($Permisos) {
         break;
     case "admin":
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index1.php">MyVet Animalia</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

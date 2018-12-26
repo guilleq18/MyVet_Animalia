@@ -53,7 +53,7 @@ if ($f==2) {
 <!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////////////-->        
             <div>
               <table class="table table-hover table-condensed table-bordered" id="iddatatable">
-              <thead style="background-color: #dc3545;color: white; font-weight: bold;">
+              <thead style="background-color: #194270;color: white; font-weight: bold;">
                     <tr>
                       
                       <td width="80">Nombre</td>
@@ -63,9 +63,9 @@ if ($f==2) {
                       <td width="10">Color</td>
                       <td width="10">Tamaño</td>
                       <td width="10">Edad</td>
-                      <td style="background-color: #2874a6;" width="100">Nombre del Cliente</td>
-                      <td style="background-color: #2874a6;" width="100" >Apellido del Cliente</td>
-                      <td style="background-color: #2874a6;" width="10">Modificar</td>
+                      <td width="100">Nombre del Cliente</td>
+                      <td width="100" >Apellido del Cliente</td>
+                      <td width="10">Modificar</td>
                       
         
                     </tr>

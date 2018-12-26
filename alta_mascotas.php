@@ -51,7 +51,7 @@ if ($f==1) {
 <!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////////////-->        
             <div>
               <table class="table table-hover table-condensed table-bordered" id="iddatatable">
-              <thead style="background-color: #dc3545;color: white; font-weight: bold;">
+              <thead style="background-color: #194270;color: white; font-weight: bold;">
                     <tr>
                       
                       <td width="50">DNI</td>

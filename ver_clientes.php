@@ -2,6 +2,8 @@
 <html>
 <head>
 
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+
   <title></title>
 <?php 
 require "scripts.php";
@@ -39,8 +41,8 @@ $ResCliente->setFetchMode(PDO::FETCH_ASSOC);
             <hr>
 <!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////////////-->        
             <div>
-              <table class="table table-hover table-condensed table-bordered" id="iddatatable">
-              <thead style="background-color: #dc3545;color: white; font-weight: bold;">
+              <table class="table table-hover table-condensed table-bordered dt-responsive" id="iddatatable">
+              <thead style="background-color: #194270;color: white; font-weight: bold;">
                     <tr>
                       
                       
