@@ -89,7 +89,7 @@ if ($f==3){
 		</div> <!-- form-group end.// -->
 	</div> <!-- form-row end.// -->
 	<div class="form-group">
-		<label>Email address</label>
+		<label>Dirección de E-Mail</label>
 		<input type="email" class="form-control" placeholder="" name="email" id="email" required>
 		<small class="form-text text-muted">Tu correo nunca será compartido con nadie mas.</small>
 	</div> <!-- form-group end.// -->

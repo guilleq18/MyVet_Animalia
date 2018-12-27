@@ -5,14 +5,14 @@
   <title></title>
 <?php 
 
-include 'menu.php';
+
 include "conexion.php";
 require "scripts.php";
 include "permisos.php";
 
 switch ($Permisos) {
   case 'admin':
-
+include 'menu.php';
 
 error_reporting(0);
 $f=$_GET['f']; 
@@ -169,6 +169,104 @@ if ($f==1) {
 
 
 <?php
+
+  
+
+break;
+case "cliente":
+?>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+<?php 
+
+include 'menu.php';
+
+
+
+$vacuna="SELECT * FROM calendariosvacunacion where id_mascotas=:id";
+$Resvacuna=$base ->prepare ($vacuna);
+$Resvacuna->execute(array("id"=>$_GET['i1'] ));
+$Resvacuna->setFetchMode(PDO::FETCH_ASSOC); 
+
+
+?>
+
+
+</head>
+<body>
+  <br>
+  <div class="container" style="max-width: 1800px; width: 1400px;">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="card text-left">
+
+          <div class="card-header">
+          <a href="ver_mascotas_clientes.php" class="float-left btn btn-secondary mt-1">Volver</a>
+            
+          <h4 class="card-title text-center mt-2"> Historial de Vacunación</h4>
+
+           
+          </div>
+          <div class="card-body">
+          <div class="col-sm-6">
+              
+          </div>
+           <hr>
+
+<!--////////////////////////////////COMIENZO DATATABLE///////////////////////////////////////////-->        
+            <div>
+              <table class="table table-hover table-condensed table-bordered" id="iddatatable">
+              <thead style="background-color: #194270;color: white; font-weight: bold;">
+                    <tr>
+                      
+                      <td width="10">Fecha</td>
+                      <td width="80">Enfermedad</td>
+                      <td width="80">Farmaco Aplicado</td>
+                     
+                   
+                    </tr>
+              </thead>
+                  
+              <tbody >
+                    <?php 
+                    //****************IMPRIMO CLIENTES************************
+                    while ($HVacuna=$Resvacuna->fetch()) {
+                      ?>
+                      <tr>
+                        <td><?php echo $HVacuna['fecha_vacuna'] ?></td>
+                        <td><?php echo $HVacuna['enfermedad'] ?></td>
+                        <td><?php echo $HVacuna['vacuna'] ?></td>
+                        </td>
+                         </tr>
+        <?php 
+      }
+      ?>
+   </tbody>
+   
+  </table>
+</div>
+
+
+<!--***************************************FUNCIÓN PARA BUSCAR************************************** -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#iddatatable').DataTable();
+  } );
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#tablaDatatable').load('tabla.php');
+  });
+</script>
+
+
+
+<?php
+
 break;
 }
 ?>

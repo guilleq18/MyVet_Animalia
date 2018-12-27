@@ -66,10 +66,10 @@ switch ($Permisos) {
                
                 <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Solicitar Turno</a>
+                  <a class="nav-link active" href="alta_turno_peluqueria.php">Solicitar Turno</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Ver Turnos Activos</a>
+                  <a class="nav-link active" href="ver_turno_peluqueria.php">Ver Turnos Activos</a>
                 </li>
                 
               </ul>
