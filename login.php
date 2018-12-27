@@ -25,7 +25,7 @@ while($cliente =$resultado->fetch(PDO::FETCH_ASSOC)){
 //**********************SI COINCIDEN NOS LLEVA A LA PAG PCIPAL****************************
             
             $_SESSION["idcliente"]=$cliente['id_clientes'];
-            echo $_SESSION["idcliente"] ;
+            
             header("location: index1.php");
 
 //**********************SI NO COINCIDEN DEVUELVE UN ERROR AL INICIO***********************

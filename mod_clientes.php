@@ -1,12 +1,14 @@
 <?php
+
 include 'scripts.php';
 include 'menu.php';
 include 'conexion.php';
 include 'permisos.php';
+$idcliente=$_SESSION['idcliente'];
 
 
 switch ($Permisos){
- case "admin":
+ case "cliente":
  //***************************************ALERTAS*****************************************************
 
 error_reporting(0);
@@ -17,7 +19,7 @@ $f=$_GET['f'];
 if ($f==1) {
 ?>
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>DNI Existente!!!</strong>  
+        <strong>Datos Actualizados con Exito!!!</strong>  
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -28,7 +30,7 @@ if ($f==1) {
 //***************************************Consulta para rellenar***********************************
 $clien="SELECT * FROM clientes where id_clientes=:id";
 $ResCliente=$base ->prepare ($clien);
-$ResCliente->execute(array("id"=>$_GET['i1'] ));
+$ResCliente->execute(array("id"=>$idcliente ));
 $ResCliente->setFetchMode(PDO::FETCH_ASSOC); 
 $cliente=$ResCliente->fetch()
 ?>
@@ -50,7 +52,7 @@ $cliente=$ResCliente->fetch()
 	
 </header>
 <article class="card-body">
-<form action="mod_mascota1.php" method="POST">
+<form action="mod_clientes1.php" method="POST">
 			<input type="hidden" value="<?php echo $cliente['id_clientes'] ?>" name="id">
 	<div class="form-row">
 		<div class="col form-group">
