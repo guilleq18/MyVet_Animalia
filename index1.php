@@ -18,7 +18,13 @@ include 'permisos.php';
 switch ($Permisos) {
 	case "cliente":
 ?>
-<br><br>
+
+
+<img style="width: 88%;" src="librerias/Img/animalia.jpeg" class="rounded mx-auto d-block" alt="Responsive image">
+
+
+
+
 <article class="bg-secondary mb-3">  
 <div class="card-body text-center">
     <h3 class="text-white mt-3">Veterinaria Animalia</h3>

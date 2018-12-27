@@ -34,7 +34,7 @@ if ($f==2) {
             </button>
     </div>
   <?php
-}else{
+}else if ($f==1){
   ?>
 <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Mascota Agregada con Exito!!!</strong>  
