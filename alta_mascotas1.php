@@ -34,7 +34,7 @@ switch ($Permisos){
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Nombre </label>   
-		  	<input type="text" class="form-control" placeholder="" name="nombre" id="nombre" required="">
+		  	<input type="text" class="form-control" placeholder="" name="nombre" id="nombre" required>
 		</div> 
 		<div class="col form-group">
 			<label>Tipo</label>
