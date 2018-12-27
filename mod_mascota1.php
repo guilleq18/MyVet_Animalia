@@ -10,6 +10,8 @@ include 'permisos.php';
 
 switch ($Permisos) {
 	case 'admin':
+	case 'cliente':
+
 		
 
 
@@ -34,10 +36,11 @@ $resultado->execute(array("idc"=>$idc, "nombre"=>$nombre, "sexo"=>$sexo, "raza"=
 
 
 
-
+if ($Permisos=="admin"){
 header('Location: ver_mascotas.php?f=2');
-
-
+}else
+header('Location: ver_mascotas_clientes.php?f=2');
+}
 
 
 

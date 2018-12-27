@@ -11,6 +11,7 @@ include "permisos.php";
 
 switch ($Permisos) {
   case 'admin':
+  
 error_reporting(0);
 $f=$_GET['f'];    
     

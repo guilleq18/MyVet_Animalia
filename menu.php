@@ -42,7 +42,7 @@ switch ($Permisos) {
                   <a class="nav-link active" href="mod_clientes.php">Modificar Datos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Mis Mascotas</a>
+                  <a class="nav-link active" href="ver_mascotas_clientes.php">Mis Mascotas</a>
                 </li>
               </ul>
               </div>

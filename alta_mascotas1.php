@@ -6,6 +6,8 @@ include 'permisos.php';
 
 switch ($Permisos){
  case "admin":
+ case 'cliente':
+ case 'semiAdmin':
 
 
 ?>

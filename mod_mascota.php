@@ -6,6 +6,7 @@ include 'permisos.php';
 
 switch ($Permisos){
  case "admin":
+ case "cliente":
 $masco="SELECT * FROM mascotas WHERE id_mascotas=:id";
 $ResMascotas=$base ->prepare ($masco);
 $ResMascotas->execute(array(":id"=>$_GET['i1']));
