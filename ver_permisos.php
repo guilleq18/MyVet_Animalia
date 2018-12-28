@@ -73,7 +73,7 @@ if ($f==1) {
 										while ($User=$ResUsuarios->fetch()) {
 											?>
 											<tr >
-												
+
 												<td><?php echo $User['dni'] ?></td>
 												<td><?php echo $User['nombre'] ?></td>
 												<td><?php echo $User['apellido'] ?></td>
@@ -88,7 +88,7 @@ if ($f==1) {
 										while ($perm=$ResPermiso->fetch()) {
  										?>
 
-											 <td><?php echo $perm['aplicaciones_cod'] ?></td>
+											<td><?php echo $perm['aplicaciones_cod'] ?></td>
 
 										
 
