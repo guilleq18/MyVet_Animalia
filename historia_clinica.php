@@ -42,7 +42,15 @@ if ($f==2) {
             </button>
     </div>
   <?php
-}
+}else if ($f==1) {
+  ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Historia Clinica Agregada con Exito!!!</strong>  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+  <?php
 ?>
 <!--************************************************************************************************* -->
 </head>
@@ -113,7 +121,7 @@ if ($f==2) {
                  </td>
               <td style="text-align: center;">
                 
-                  <a href="ver_historia_clinica.php?i1=i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Ver Historial</a>
+                  <a href="ver_historia_clinica.php?i1=<?php echo $Masc["id_mascotas"]?>" class=" btn btn-primary mt-1">Ver Historial</a>
                 
                   
                </td>

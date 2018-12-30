@@ -82,7 +82,7 @@ if ($f==1) {
 
           <div class="card-header">
             <a href="historia_clinica.php" class="float-left btn btn-secondary mt-1">Volver</a>
-            <a href="ver_carnet_vacunacion.php?i1=<?php echo $_GET['i1'] ?>" class="float-right btn btn-primary mt-1">Agregar</a>
+            <a href="alta_carnet_vacunacion.php?i1=<?php echo $_GET['i1'] ?>" class="float-right btn btn-primary mt-1">Agregar</a>
           <h4 class="card-title text-center mt-2"> Historial de Vacunación de: <?php echo $Masc['nombre'] ?></h4>
 
            
