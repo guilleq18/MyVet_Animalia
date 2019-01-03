@@ -104,7 +104,7 @@ $Masc=$ResMascotas->fetch()
 <article class="bg-secondary mb-3">  
 <div class="card-body text-center">
     <h3 class="text-white mt-3">Veterinaria Animalia</h3>
-<p class="h5 text-white">Contacto: 3804-3656416   <br><br> Av. Rivadavia N° 542 - La Rioja - Argenitna </p>   
+<p class="h5 text-white">Contacto: (0380) 4434648   <br><br> Av. Rivadavia N° 1021 - La Rioja - Argenitna </p>   
 </div>
 <br><br>
 </article>
@@ -208,7 +208,7 @@ $Masc=$ResMascotas->fetch()
 <article class="bg-secondary mb-3">  
 <div class="card-body text-center">
     <h3 class="text-white mt-3">Veterinaria Animalia</h3>
-<p class="h5 text-white">Contacto: 3804-3656416   <br><br> Av. Rivadavia N° 542 - La Rioja - Argenitna </p>   
+<p class="h5 text-white">Contacto: (0380) 4434648   <br><br> Av. Rivadavia N° 1021 - La Rioja - Argenitna </p>   
 </div>
 <br><br>
 </article>

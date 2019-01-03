@@ -99,7 +99,7 @@ if ($f==1) {
 		</div> 
 	</div> 
 	<div class="form-group">
-		<label>Email address</label>
+		<label>Dirección de E-Mail</label>
 		<input type="email" class="form-control" placeholder="" name="email" id="email" required>
 		<small class="form-text text-muted">Tu correo nunca será compartido con nadie mas.</small>
 	</div> 
@@ -115,14 +115,7 @@ if ($f==1) {
 		    
 		</div> 
 	</div> 
-	<div class="form-group">
-		<label>Contraseña</label>
-	    <input class="form-control" type="password" name="pass" id="pass" required>
-	</div> 
-	<div class="form-group">
-		<label>Vuelve a Ingresar la Contraseña</label>
-	    <input class="form-control" type="password" name="pass2" id="pass2" required>
-	</div>  
+	<br><br>
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Registrar  </button>
     </div>      
@@ -149,7 +142,8 @@ if ($f==1) {
 <?php
         break;
         case 'semiAdmin':
-        	//***************************************ALERTAS*****************************************************
+
+//***************************************ALERTAS*****************************************************
 
 error_reporting(0);
 $f=$_GET['f'];
@@ -214,7 +208,8 @@ if ($f==1) {
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	<h4 class="card-title mt-2">Registro</h4>
+	 <a href="index1.php" class="float-right btn btn-secondary mt-1">Volver</a>
+	<h4 class="card-title text-center mt-2">Registro de Clientes</h4>
 </header>
 <article class="card-body">
 <form action="alta_clientes.admin1.php" method="POST">
@@ -222,47 +217,47 @@ if ($f==1) {
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Nombre </label>   
-		  	<input type="text" class="form-control" placeholder="" name="nombre" id="nombre">
+		  	<input type="text" class="form-control" placeholder="" name="nombre" id="nombre" required="">
 		</div> 
 		<div class="col form-group">
 			<label>Apellido</label>
-		  	<input type="text" class="form-control" placeholder=" " name="apellido" id="apellido">
+		  	<input type="text" class="form-control" placeholder=" " name="apellido" id="apellido" required>
 		</div> 
 	</div> 
 	<div class="form-row">
 		<div class="col form-group">
 			<label>DNI </label>   
-		  	<input type="text" class="form-control" placeholder="" name="dni" id="dni">
+		  	<input type="text" class="form-control" placeholder="" name="dni" id="dni" required>
 		</div> 
 		<div class="col form-group">
 			<label>Teléfono</label>
-		  	<input type="text" class="form-control" placeholder=" " name="telef" id="telef">
+		  	<input type="text" class="form-control" placeholder=" " name="telef" id="telef" required>
 		</div> 
 	</div> 
 	<div class="form-group">
 		<label>Email address</label>
-		<input type="email" class="form-control" placeholder="" name="email" id="email">
+		<input type="email" class="form-control" placeholder="" name="email" id="email" required>
 		<small class="form-text text-muted">Tu correo nunca será compartido con nadie mas.</small>
 	</div> 
 	
 	<div class="form-row">
 		<div class="form-group col-md-6">
 		  <label>Fecha de Nacimiento</label>
-		  <input type="date" class="form-control" name="Naci" id="Naci">
+		  <input type="date" class="form-control" name="Naci" id="Naci" required>
 		</div> 
 		<div class="form-group col-md-6">
 		  <label>Dirección</label>
-		  <input type="text" class="form-control" placeholder="" name="direcc" id="direcc">
+		  <input type="text" class="form-control" placeholder="" name="direcc" id="direcc" required>
 		    
 		</div> 
 	</div> 
 	<div class="form-group">
 		<label>Contraseña</label>
-	    <input class="form-control" type="password" name="pass" id="pass">
+	    <input class="form-control" type="password" name="pass" id="pass" required>
 	</div> 
 	<div class="form-group">
 		<label>Vuelve a Ingresar la Contraseña</label>
-	    <input class="form-control" type="password" name="pass2" id="pass2">
+	    <input class="form-control" type="password" name="pass2" id="pass2" required>
 	</div>  
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Registrar  </button>
@@ -283,7 +278,7 @@ if ($f==1) {
 <article class="bg-secondary mb-3">  
 <div class="card-body text-center">
     <h3 class="text-white mt-3">Veterinaria Animalia</h3>
-<p class="h5 text-white">Contacto: 3804-3656416   <br><br> Av. Rivadavia N° 542 - La Rioja - Argenitna </p>   
+<p class="h5 text-white">Contacto: (0380) 4434648   <br><br> Av. Rivadavia N° 1021 - La Rioja - Argenitna </p>   
 </div>
 <br><br>
 </article>

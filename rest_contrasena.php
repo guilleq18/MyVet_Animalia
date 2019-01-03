@@ -18,17 +18,7 @@ if ($f==1) {
     </div>
 <?php
 }
-//***********************************CONTRASEÑA O USUARIOS NO ENCONTRADOS******************************
-if ($f==2){
-    ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong> Contraseña establecida con exito </strong>  Intenta nuevamente!.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-    </div>
-<?php
-}
+
 ?>
 
 <!--****************************************FORMULARIO********************************************** -->
@@ -46,11 +36,11 @@ if ($f==2){
 <form action="rest_contrasena1.php" method="POST">
 	
 	<div class=" form-group">
-			<label>DNI </label>   
+			<label>DNI de la cuenta a recuperar </label>   
 		  	<input type="text" class="form-control" placeholder="" name="dni" id="dni">
 	</div> 
 		
-		<label>Email</label>
+		<label>Email de la cuenta a recuperar</label>
 		<input type="email" class="form-control" placeholder="" name="email" id="email">
    </div> 
    <br> 

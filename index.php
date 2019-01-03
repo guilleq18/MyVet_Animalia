@@ -17,9 +17,9 @@ if ($f==1) {
             </button>
     </div>
 <?php
-}
+}else if ($f==2){
 //***********************************CONTRASEÑA O USUARIOS NO ENCONTRADOS******************************
-if ($f==2){
+
     ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Usuario o Contraseña incorrectos</strong>  Intenta nuevamente!.
@@ -28,7 +28,19 @@ if ($f==2){
             </button>
     </div>
 <?php
+}else if ($f==4){
+//***********************************CONTRASEÑA O USUARIOS NO ENCONTRADOS******************************
+
+    ?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Contraseña Reestablecida con exito!!</strong>  Su nueva contraseña fue enviada a su mail!.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+<?php
 }
+
 ?>
 
 <!--****************************************FORMULARIO********************************************** -->

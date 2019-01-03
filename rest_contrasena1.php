@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
-//require 'conexion.php';
+include 'conexion.php';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -25,8 +25,7 @@ require 'phpmailer/src/SMTP.php';
 ////////////////////////////////////////////////////////////////////////////////////////////////
                     // LA BD TRAE LOS DATOS DE LA TABLA CLIENTES// 
 try{
-$base=new PDO("mysql:host=localhost; dbname=myvet_animalia", "root", "");
-$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
  $Consul_Datos ="SELECT * FROM clientes WHERE dni=:DNI "  ;               
  $Resultado= $base->prepare ($Consul_Datos);
@@ -77,15 +76,15 @@ try {
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp-mail.outlook.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'smtp.hostinger.com.ar';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'william_18@live.com.ar';                 // SMTP username
-    $mail->Password = 'las24horas';                           // SMTP password
+    $mail->Username = 'consultas@myvetanimalia.online';                 // SMTP username
+    $mail->Password = 'animalia';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
     $mail->CharSet = 'UTF-8';
     //Recipients
-    $mail->setFrom('william_18@live.com.ar', 'Mailer');
+    $mail->setFrom('consultas@myvetanimalia.online', 'Mailer');
     $mail->addAddress($Cliente['email'] , 'Joe User');     // Add a recipient
     /*$mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
@@ -104,7 +103,7 @@ try {
 
     $mail->send();
     echo 'Registro Realizado con Exito!';
-    header("location: rest_contrasena.php?f=2");
+    header("location: index.php?f=4");
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
