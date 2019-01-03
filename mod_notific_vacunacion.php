@@ -2,12 +2,17 @@
 include 'scripts.php';
 include 'menu.php';
 include 'permisos.php';
+include 'conexion.php';
 
 
 switch ($Permisos){
  case "admin":
 
-
+$notivac="SELECT * FROM notificacionvacunacion WHERE id_notificacion=:id";
+$Resnot=$base ->prepare ($notivac);
+$Resnot->execute(array(':id'=>$_GET['i']));
+$Resnot->setFetchMode(PDO::FETCH_ASSOC); 
+$noti=$Resnot->fetch();
 ?>
 <!--*************************************FORMULARIO************************************************ -->
 
@@ -22,26 +27,27 @@ switch ($Permisos){
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-	 <a href="historia_clinica.php" class="float-right btn btn-secondary mt-1">Volver</a>
-	<h4 class="card-title text-center text-center mt-2">Notificación de Vacunación</h4>
+	 <a href="ver_notif_vacu.php" class="float-right btn btn-secondary mt-1">Volver</a>
+
+	<h4 class="card-title text-center text-center mt-2">Modificación de Vacunación</h4>
 </header>
 <article class="card-body">
-<form action="alta_notific_vacunacion1.php" method="POST">
+<form action="mod_notific_vacunacion1.php" method="POST">
 
-			<input type="hidden" value="<?php echo $_GET['i1'] ?>" name="idcliente">
-			<input type="hidden" value="<?php echo $_GET['i1'] ?>" name="idcliente">
-			<input type="hidden" value="<?php echo $_GET['idm'] ?>" name="idmascota">
+			<input type="hidden" value="<?php echo $_GET['i'] ?>" name="idnotificacion">
+			<input type="hidden" value="<?php echo $noti['id_clientes']?>" name="idcliente">
+			<input type="hidden" value="<?php echo $noti['id_mascotas']?>" name="idmascota">
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Farmaco</label>   
-		  	<input type="text" class="form-control" placeholder="" name="farmaco" id="farmaco" required="">
+		  	<input type="text" class="form-control" value="<?php echo $noti['Farmaco'] ?>" name="farmaco" id="farmaco" required>
 		</div> 
 		 
 	</div> 
 	<div class="form-row">
 		<div class="col form-group">
 			<label>Numero de Dosis</label>
-		  	<input type="text" class="form-control" placeholder=" " name="dosis" id="dosis" required>
+		  	<input type="text" class="form-control" value="<?php echo $noti['numero_dosis']?> "name="dosis" id="dosis">
 		</div>
 		
 	</div> 
@@ -49,15 +55,14 @@ switch ($Permisos){
 	<div class="form-row">
 		<div class="form-group col-md-6">
 		  <label>Fecha de Aplicación</label>
-		  <input type="date" class="form-control" name="fecha" id="fecha" required>
+		  <input type="date" class="form-control" name="fecha" id="fecha" required value="<?php echo $noti['fecha_vacuna']?>">
 		</div> 
-		
 		
 	</div> <br><br>
 	
 	
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Registrar  </button>
+        <button type="submit" class="btn btn-primary btn-block"> Actualizar  </button>
     </div>      
                                              
 </form>

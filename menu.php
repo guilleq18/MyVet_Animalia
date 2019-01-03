@@ -216,7 +216,8 @@ switch ($Permisos) {
               <a class="nav-link active" href="historia_clinica.php">Historias Clinicas</a>
         </li>
         <li class="nav-item">
-              <a class="nav-link active" href="ver_notific_vacunacion.php">Ver Notificaciones</a>
+              <a class="nav-link active" href="ver_notif_vacu.php?v=3">Ver Notificaciones</a>
+
         </li>
       
         <li class="nav-item">
