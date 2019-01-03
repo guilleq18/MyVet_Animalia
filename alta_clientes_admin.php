@@ -21,46 +21,19 @@ if ($f==1) {
             </button>
     </div>
 <?php
-//************************************USUARIO AGREGADO*****************************************
-}else if ($f==1) {
-?>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Usuario Agregado con Exito!!!</strong>  
+}elseif ($f==2) {
+	?>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Usuario Ya Existente</strong>  
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
     </div>
-
-
-<!--********************************CONTRASEÑA DEMASIADO CORTA**********************************-->
-<?php
- }else if ($f==3){
-?>
-	<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>La contraseña es Demasiado corta</strong>  Ingrese una nueva contraseña de almenos 8 caracteres!.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-    </div>
-
-<?php
-}else if($f==4){
-?>
-<!--************************************CONTRASEÑAS NO COINCIDEN************************************-->
- <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Las contraseñas NO coinciden!</strong>  Ingrese una nuevamente la contraseña!.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-    </div>
-
-
-
 <?php
 }
-?>
-<!--*************************************FORMULARIO************************************************ -->
 
+//*************************************FORMULARIO************************************************ -->
+?>
 
 
 <div class="container">
@@ -76,7 +49,7 @@ if ($f==1) {
 	<h4 class="card-title text-center mt-2">Registro de Clientes</h4>
 </header>
 <article class="card-body">
-<form action="alta_clientes.admin1.php" method="POST">
+<form action="alta_clientes_admin1.php" method="POST">
 
 	<div class="form-row">
 		<div class="col form-group">
