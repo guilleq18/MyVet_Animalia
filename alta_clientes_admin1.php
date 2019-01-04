@@ -23,6 +23,34 @@ include 'permisos.php';
 switch ($Permisos) {
     case 'admin':
     case 'semiAdmin':
+
+
+//*******************************COMPRUEBO SI EL EMAIL ESTA BIEN ESCRITO*******************************
+
+function validarEmail($str)
+{
+  $result = (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
+  
+  if ($result)
+  {
+    list($user, $domain) = split('@', $str);
+    
+    $result = checkdnsrr($domain, 'MX');
+  }
+  
+  return $result;
+}
+$email=$_POST['email'];
+if ((validarEmail($email))==0) {
+	
+	header("location: alta_clientes_admin.php?f=3");
+}
+
+
+
+
+
+
        
 //******************************COMPRUEBO SI EL USUARIO YA EXISTE***************************************
 

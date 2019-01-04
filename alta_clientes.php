@@ -47,7 +47,21 @@ if ($f==3){
 
 
 <?php
+}elseif ($f==5) {
+	?>
+<!--********************************E-mail Invalido**********************************-->
+ <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Email Incompleto. Por favor Ingrese una direccion de E-mail Valida</strong>  Ingrese una nuevamente la contraseña!.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+
+
+
+<?php
 }
+//*******************************************************************************************
 ?>
 
 

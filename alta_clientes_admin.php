@@ -30,6 +30,15 @@ if ($f==1) {
             </button>
     </div>
 <?php
+}elseif ($f==3) {
+	?>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Email Incompleto. Por favor Ingrese una direccion de E-mail Valida</strong>  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+<?php
 }
 
 //*************************************FORMULARIO************************************************ -->

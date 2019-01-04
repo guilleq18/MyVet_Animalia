@@ -24,6 +24,25 @@ while ($User=$ResUsuarios->fetch()) {
 	}
 }
 
+//*******************************COMPRUEBO SI EL E-MAIL ESTA ESCRITO BIEN*******************************
+function validarEmail($str)
+{
+  $result = (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
+  
+  if ($result)
+  {
+    list($user, $domain) = split('@', $str);
+    
+    $result = checkdnsrr($domain, 'MX');
+  }
+  
+  return $result;
+}
+$email=$_POST['email'];
+if ((validarEmail($email))==0) {
+	
+	header("location: alta_clientes.php?f=5");
+}
 //*******************************COMPRUEBO SI LA CONTRASEÑA TIENE < DE 8 CARACTERES*********************
 		
 	if ($flag==0) {
