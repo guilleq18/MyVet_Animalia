@@ -5,6 +5,16 @@ $flag=0;
 $dni=$_POST['dni'];
 $contrasena=$_POST['pass'];
 $contrasena2=$_POST['pass2'];
+//*****************************************VALIDAR ESCRITURA DE EMAIL**************************************************
+function validarEmail($email)
+{
+    return (filter_var($email, FILTER_VALIDATE_EMAIL)) ? 1 : 0;
+}
+if (validarEmail($_POST['email'])){
+    
+ 
+//*************************SI EL EMAIL ES VALIDO REALIZA LAS DEMAS COMPROBACIONES*****************************
+
 
 //******************************COMPRUEBO SI EL USUARIO YA EXISTE***************************************
 
@@ -25,24 +35,7 @@ while ($User=$ResUsuarios->fetch()) {
 }
 
 //*******************************COMPRUEBO SI EL E-MAIL ESTA ESCRITO BIEN*******************************
-function validarEmail($str)
-{
-  $result = (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
-  
-  if ($result)
-  {
-    list($user, $domain) = split('@', $str);
-    
-    $result = checkdnsrr($domain, 'MX');
-  }
-  
-  return $result;
-}
-$email=$_POST['email'];
-if ((validarEmail($email))==0) {
-	
-	header("location: alta_clientes.php?f=5");
-}
+
 //*******************************COMPRUEBO SI LA CONTRASEÑA TIENE < DE 8 CARACTERES*********************
 		
 	if ($flag==0) {
@@ -88,3 +81,21 @@ if ((validarEmail($email))==0) {
 }else{
 			header("location: alta_clientes.php?f=2");
 		}
+
+
+
+
+
+
+
+
+
+//*****************************SI EL E-MAIL ES INVALIDO ENVIO UN MSJ DE ERROR**********************************
+} 
+else 
+{
+   header("location: alta_clientes.php?f=5");
+}
+
+
+

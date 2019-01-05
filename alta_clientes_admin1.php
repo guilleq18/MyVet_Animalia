@@ -27,24 +27,20 @@ switch ($Permisos) {
 
 //*******************************COMPRUEBO SI EL EMAIL ESTA BIEN ESCRITO*******************************
 
-function validarEmail($str)
+
+function validarEmail($email)
 {
-  $result = (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
-  
-  if ($result)
-  {
-    list($user, $domain) = split('@', $str);
+    return (filter_var($email, FILTER_VALIDATE_EMAIL)) ? 1 : 0;
+}
+if (validarEmail($_POST['email'])){
+
     
-    $result = checkdnsrr($domain, 'MX');
-  }
-  
-  return $result;
-}
-$email=$_POST['email'];
-if ((validarEmail($email))==0) {
-	
-	header("location: alta_clientes_admin.php?f=3");
-}
+ 
+//*************************SI EL EMAIL ES VALIDO REALIZA LAS DEMAS COMPROBACIONES*****************************
+
+
+//******************************COMPRUEBO SI EL USUARIO YA EXISTE***************************************
+
 
 
 
@@ -143,6 +139,10 @@ try {
 </html>
 <?php
 
+}else{
+	
+	header("location: alta_clientes_admin.php?f=3");
+}
 
         break;
 }
